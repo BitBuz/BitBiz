@@ -10,6 +10,17 @@ fetch(req)
     });
 });
 
+var config = {
+  apiKey: "AIzaSyBCC89dBBRgSrtYp8yJeT_X8U-dZJJ7IiQ",
+  authDomain: "bitbuzz-83269.firebaseapp.com",
+  databaseURL: "https://bitbuzz-83269.firebaseio.com",
+  projectId: "bitbuzz-83269",
+  storageBucket: "",
+  messagingSenderId: "319589480030"
+};
+
+firebase.initializeApp(config);
+
 $('.content').hide();
 
   // Auth using a popup.
@@ -20,6 +31,7 @@ $('.content').hide();
 $(document).on('click', '.signIn', function() {
     firebase.auth().signInWithPopup(provider).then(function(result) {
      // This gives you a Google Access Token.
+     //  This generates a googleapi fo the users google account info
      var token = result.credential.accessToken;
      // The signed-in user info.
      var user = result.user;
