@@ -10,7 +10,18 @@ fetch(req)
     });
 });
 
-$('.content').hide();
+var config = {
+  apiKey: "AIzaSyBCC89dBBRgSrtYp8yJeT_X8U-dZJJ7IiQ",
+  authDomain: "bitbuzz-83269.firebaseapp.com",
+  databaseURL: "https://bitbuzz-83269.firebaseio.com",
+  projectId: "bitbuzz-83269",
+  storageBucket: "",
+  messagingSenderId: "319589480030"
+};
+
+firebase.initializeApp(config);
+
+$('#client').hide();
 
   // Auth using a popup.
   var provider = new firebase.auth.GoogleAuthProvider();
@@ -19,11 +30,11 @@ $('.content').hide();
 
 $(document).on('click', '.signIn', function() {
     firebase.auth().signInWithPopup(provider).then(function(result) {
-     // This gives you a Google Access Token.
+     // This gives you a Google Access Token, a googleapi
      var token = result.credential.accessToken;
      // The signed-in user info.
      var user = result.user;
-     $('.content').show();
+     $('#client').show();
      loggedIn();
      
     });
@@ -32,15 +43,16 @@ $(document).on('click', '.signIn', function() {
     .html('Sign Out Of Google');
 });
 
+
 $(document).on('click', '.signOut', function () {
   firebase.auth().signOut().then(function() {
-    $('.content').hide();
+    $('#client').hide();
   }, function(error) {
     // An error happened.
   });
   $(this).removeClass('signOut')
     .addClass('signIn')
-    .html('Sign In With Google To See Schedule');
+    .html('Sign In With Google!');
 });
 
 
