@@ -21,7 +21,7 @@ var config = {
 
 firebase.initializeApp(config);
 
-$('.content').hide();
+$('#client').hide();
 
   // Auth using a popup.
   var provider = new firebase.auth.GoogleAuthProvider();
@@ -30,12 +30,11 @@ $('.content').hide();
 
 $(document).on('click', '.signIn', function() {
     firebase.auth().signInWithPopup(provider).then(function(result) {
-     // This gives you a Google Access Token.
-     //  This generates a googleapi fo the users google account info
+     // This gives you a Google Access Token, a googleapi
      var token = result.credential.accessToken;
      // The signed-in user info.
      var user = result.user;
-     $('.content').show();
+     $('#client').show();
      loggedIn();
      
     });
@@ -44,15 +43,16 @@ $(document).on('click', '.signIn', function() {
     .html('Sign Out Of Google');
 });
 
+
 $(document).on('click', '.signOut', function () {
   firebase.auth().signOut().then(function() {
-    $('.content').hide();
+    $('#client').hide();
   }, function(error) {
     // An error happened.
   });
   $(this).removeClass('signOut')
     .addClass('signIn')
-    .html('Sign In With Google To See Schedule');
+    .html('Sign In With Google!');
 });
 
 
