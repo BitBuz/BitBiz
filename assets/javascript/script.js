@@ -1,5 +1,4 @@
 
-
 (function(b,i,t,C,O,I,N) {
     window.addEventListener('load',function() {
       if(b.getElementById(C))return;
@@ -10,7 +9,7 @@
 
 
 
-  
+
 var url1 = 'https://newsapi.org/v2/everything?' +
     'q=bitcoin&' +
     'from=' + moment().format('L') + '&' +
@@ -49,3 +48,6 @@ fetch(req)
             }
         });
 });
+$(document).ready(function () {
+ $(".btcwdgt-chart").addClass("charted");
+})
