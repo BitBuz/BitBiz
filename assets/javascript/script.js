@@ -18,21 +18,21 @@ fetch(req)
             console.log(response);
             for (let i = 0; i < response.articles.length; i++) {
                 var newdiv = $("<div>");
-                newdiv.css("border", "1px lightgrey solid");
+                newdiv.css("border", ".5px lightgrey solid");
                 var Aurl = $("<a>");
                 Aurl.attr("href", response.articles[i].url);
                 var title = response.articles[i].title;
                 Aurl.text(title);
 
-                Aurl.css("padding", "5px");           
+                Aurl.css("padding", "10px"); 
+
                 var image = $("<img>")
                 image.attr("src", response.articles[i].urlToImage);
-                image.css("width", "50%");               
+                image.css("width", "25%");               
                 var space = $("<p>");
                 space.css("height", "3%");
                 newdiv.prepend("<p>");
                 newdiv.prepend(Aurl);
-                newdiv.prepend("<p>");
                 newdiv.prepend(image);
                 newdiv.prepend(space);
                 $("#newdiv").prepend(newdiv);
