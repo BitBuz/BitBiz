@@ -5,6 +5,13 @@ var url1 = 'https://newsapi.org/v2/everything?' +
     'apiKey=4a933268eadd4054ad084e87571eedac';
 
 var req = new Request(url1);
+(function(b,i,t,C,O,I,N) {
+    window.addEventListener('load',function() {
+      if(b.getElementById(C))return;
+      I=b.createElement(i),N=b.getElementsByTagName(i)[0];
+      I.src=t;I.id=C;N.parentNode.insertBefore(I, N);
+    },false)
+  })(document,'script','https://widgets.bitcoin.com/widget.js','btcwdgt');
 
 fetch(req)
     .then(function (response) {
@@ -23,20 +30,17 @@ fetch(req)
                 Aurl.attr("href", response.articles[i].url);
                 var title = response.articles[i].title;
                 Aurl.text(title);
-
                 Aurl.css("padding", "10px"); 
-
-                var image = $("<img>")
+                var image = $("<img>");
                 image.attr("src", response.articles[i].urlToImage);
-                image.css("width", "25%");               
+                image.css("width", "25%");         
                 var space = $("<p>");
                 space.css("height", "3%");
                 newdiv.prepend("<p>");
                 newdiv.prepend(Aurl);
                 newdiv.prepend(image);
                 newdiv.prepend(space);
-                $("#newdiv").prepend(newdiv);
-
+                $("#newdiv").append(newdiv);
 
             }
         });
