@@ -1,49 +1,56 @@
 <doctype html>
 
-    <html lang="en-us">
-    
-      <head>
-    
-        <meta charset="UTF-8">
-        <title>Bit Buzz</title>
-        <!-- Google sign in links -->
-        <meta name="google-signin-client_id" content="167602757568-k6027cugtilquc0nh7oal29icsbs44ov.apps.googleusercontent.com">
-        <meta name="google-signin-cookiepolicy" content="single_host_origin">
-        <meta name="google-signin-scope" content="profile email">
-        <!-- Bootstrap -->
-        <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css">
-        <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.2.1/jquery.min.js"></script>
-        <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/js/bootstrap.min.js"></script>
-        <script src="https://cdn.jsdelivr.net/momentjs/2.12.0/moment.min.js"></script>
-        <script src="https://cdnjs.cloudflare.com/ajax/libs/moment.js/2.22.0/moment.js"></script>
-      </head>
-    <body>
-       
-    <div class="container">
-    
-            <!-- Jumbotron -->
-            <div class="jumbotron" style="background-color: black; color: white">
-              <h1 class="text-center">BitBuzz</h1>
-              <h3 class="text-center">Bringing the front-page of the interenet to BTC</h3>
-            </div>            
-            <div class="btcwdgt-chart" style="width:100%"></div>
+  <html lang="en-us">
 
-      <div class="panel panel-primary">
-            <div class="panel-heading">
-              <h3 class="panel-title"><strong>Trending Articles</strong></h3>
-            </div>
-            <div class="panel-body">
-    
-              <!-- Entry Form -->
-              <form>
-              <div id="newdiv"></div>
-    
-            </div>
-    
+  <head>
+
+    <meta charset="UTF-8">
+    <title>Bit Buzz</title>
+    <!-- Google sign in links -->
+    <meta name="google-signin-client_id" content="167602757568-k6027cugtilquc0nh7oal29icsbs44ov.apps.googleusercontent.com">
+    <meta name="google-signin-cookiepolicy" content="single_host_origin">
+    <meta name="google-signin-scope" content="profile email">
+    <!-- Bootstrap -->
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css">
+    <link rel="stylesheet" href="assets/css/style.css">    
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.2.1/jquery.min.js"></script>
+    <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/js/bootstrap.min.js"></script>
+    <script src="https://cdn.jsdelivr.net/momentjs/2.12.0/moment.min.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/moment.js/2.22.0/moment.js"></script>
+  </head>
+
+  <body>
+
+    <div class="container">
+
+      <!-- Jumbotron -->
+      <div class="jumbotron" style="background-color: black; color: white">
+        <h1 class="text-center">BitBuzz</h1>
+        <h3 class="text-center">Bringing the front-page of the interenet to BTC</h3>
       </div>
-    
+      <div class="row">
+        <div class="col-6">
+          <div class="btcwdgt-chart"></div>
+        </div>
+        <div class="col-6">
+          <div class="btcwdgt-chart" bw-cash="true"></div>
+          </div>
+        </div>
+
+        <div>
+            <h3 class="head">
+              <strong>Trending Articles</strong>
+            </h3>
+          <div>
+
+            <div id="newdiv"></div>
+
+          </div>
+        </div>
+
+
     </div>
-    
+
     <script src="assets/javascript/script.js"></script>
-    <script src="assets/javascript/script_coindesk.js"></script>        
-    </body>
+    <script src="assets/javascript/script_coindesk.js"></script>
+  </body>

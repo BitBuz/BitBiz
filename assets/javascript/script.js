@@ -1,10 +1,5 @@
-var url1 = 'https://newsapi.org/v2/everything?' +
-    'q=bitcoin&' +
-    'from=' + moment().format('L') + '&' +
-    'sortBy=popularity&' +
-    'apiKey=4a933268eadd4054ad084e87571eedac';
 
-var req = new Request(url1);
+
 (function(b,i,t,C,O,I,N) {
     window.addEventListener('load',function() {
       if(b.getElementById(C))return;
@@ -13,6 +8,15 @@ var req = new Request(url1);
     },false)
   })(document,'script','https://widgets.bitcoin.com/widget.js','btcwdgt');
 
+
+
+  
+var url1 = 'https://newsapi.org/v2/everything?' +
+    'q=bitcoin&' +
+    'from=' + moment().format('L') + '&' +
+    'sortBy=popularity&' +
+    'apiKey=4a933268eadd4054ad084e87571eedac';
+var req = new Request(url1);
 fetch(req)
     .then(function (response) {
         console.log("heya");
