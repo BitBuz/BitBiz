@@ -34,7 +34,7 @@ function signIn() {
         var user = result.user;
 
         console.log("sign in");
-        $(".signIn").text("Google Sign Out");
+        $(".signIn").text("Hello"+user.displayName);
         console.log(user);
         // ...
     });
