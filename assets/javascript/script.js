@@ -7,7 +7,39 @@
     },false)
   })(document,'script','https://widgets.bitcoin.com/widget.js','btcwdgt');
 
+  var config = {
+    apiKey: "AIzaSyAgzmeiqbqq8dTCmoZC2bbirDi56UaYRMY",
+    authDomain: "bitcoin-93d8e.firebaseapp.com",
+    databaseURL: "https://bitcoin-93d8e.firebaseio.com",
+    projectId: "bitcoin-93d8e",
+    storageBucket: "bitcoin-93d8e.appspot.com",
+    messagingSenderId: "1004449441010"
+  };
+  firebase.initializeApp(config);
+  console.log('i am here')
+ 
+ 
+ 
+ 
+    var provider = new firebase.auth.GoogleAuthProvider();
+    firebase.auth().signInWithPopup(provider).then(function(result) {
+        console.log('i ma here')
+        //console.log(Popup);
+        // This gives you a Google Access Token. You can use it to access the Google API.
+        var token = result.credential.accessToken;
+        console.log('can you access the token');
+        // The signed-in user info.
+        var user = result.user;
+ 
+        console.log(user.val());
+        // ...
+    });
+ function signIn() {
+        console.log("sign in");
+ 
+ };
 
+ 
 
 
 var url1 = 'https://newsapi.org/v2/everything?' +
