@@ -1,11 +1,10 @@
 .head {
     background-color: lightgray; 
-    color: white;
     text-align: center; 
     padding: 5px;
 }
 .charted {
-    margin-left: 40% !important;
+    margin-left: auto !important;
     margin-right: auto !important;
 }
 .jumbotron {
@@ -13,11 +12,4 @@
 }
 h4 {
     text-align: center
-}
-header {
-    height: 100px;
-
-}
-.email {
-    color: white
 }

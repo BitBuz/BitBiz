@@ -1,67 +1,130 @@
-<doctype html>
-
-  <html lang="en-us">
+<!DOCTYPE html>
+<html lang="en">
 
   <head>
 
-    <meta charset="UTF-8">
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=yes">
+    <meta name="description" content="">
+    <meta name="author" content="">
+
     <title>Bit Buzz</title>
-    <!-- Google sign in links -->
+
+    <!-- Bootstrap core CSS -->
     <meta name="google-signin-client_id" content="167602757568-k6027cugtilquc0nh7oal29icsbs44ov.apps.googleusercontent.com">
     <meta name="google-signin-cookiepolicy" content="single_host_origin">
     <meta name="google-signin-scope" content="profile email">
-    <!-- Bootstrap -->
-    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css">
+    <link href="vendor/bootstrap/css/bootstrap.min.css" rel="stylesheet">
     <link rel="stylesheet" href="assets/css/style.css">    
     <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.2.1/jquery.min.js"></script>
-    <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/js/bootstrap.min.js"></script>
     <script src="https://cdn.jsdelivr.net/momentjs/2.12.0/moment.min.js"></script>
     <script src="https://cdnjs.cloudflare.com/ajax/libs/moment.js/2.22.0/moment.js"></script>
     <script src="https://www.gstatic.com/firebasejs/4.12.1/firebase.js"></script>
+
+    <!-- Custom styles for this template -->
+    <link href="css/scrolling-nav.css" rel="stylesheet">
+
   </head>
 
-  <body>
+  <body id="page-top">
 
-    <div class="container">
-
-      <!-- Jumbotron -->
-      <div class="jumbotron" style="background-color: black; color: white">
-        <h1 class="text-center">₿itBuzz</h1>
-        <h3 class="text-center">Bringing the front-page of the interenet to BTC</h3>
-        <h3 id= "client" class="text-center">Hello<span id="clientName"> </h3>
+    <!-- Navigation -->
+    <nav class="navbar navbar-expand-lg navbar-dark bg-dark fixed-top" id="mainNav">
+      <div class="container">
+        <a class="navbar-brand js-scroll-trigger" href="#page-top">BitBuzz</a>
+        <!-- <p id= "client" class="text-center">Hello<span id="clientName"> </p> -->
           <button class="text-center btn btn-sm signIn">Google Sign In</button>
+        <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarResponsive" aria-controls="navbarResponsive" aria-expanded="false" aria-label="Toggle navigation">
+          <span class="navbar-toggler-icon"></span>
+        </button>
+        <div class="collapse navbar-collapse" id="navbarResponsive">
+          <ul class="navbar-nav ml-auto">
+            <li class="nav-item">
+              <a class="nav-link js-scroll-trigger" href="#about">Price Charts</a>
+            </li>
+            <li class="nav-item">
+              <a class="nav-link js-scroll-trigger" href="#services">Articles</a>
+            </li>
+            <li class="nav-item">
+              <a class="nav-link js-scroll-trigger" href="#contact">Chat</a>
+            </li>
+          </ul>
+        </div>
       </div>
-    </div>
-    <div class="container">  
-        <h4>Bitcoin</h4>
-        <div class="row">    
-      <div class="chart">
-          <div class="btcwdgt-chart"></div>
+    </nav>
+
+    <header class="bg-dark text-white">
+      <div class="container text-center">
+        <h3>₿itBuzz</h3>
+        <p class="lead">The front-page of the internet for BTC and BTC Cash</p>
       </div>
-    </div>
-    <h4>Bitcoin Cash</h4>   
-    <div class="row">    
-      <div class="chart">     
-          <div class="btcwdgt-chart" bw-cash="true"></div>
-        </div> 
-      </div>         
+    </header>
 
-    </div>
-      <div class="container">   
-        <div>
-            <h3 class="head">
-              <strong>Trending Articles</strong>
-            </h3>
-          <div>
+    <section id="about">
+      <div class="container">
+        <div class="row">
+                  <div class="col">   
+                      <h4>Bitcoin</h4> 
+                <div class="chart">
+                    <div class="btcwdgt-chart"></div>
+                </div>
+              </div>
+              <div class="col"> 
+                  <h4>Bitcoin Cash</h4>      
+                <div class="chart">     
+                    <div class="btcwdgt-chart" bw-cash="true"></div>
+                  </div> 
+                </div>  
+      </div>
+    </section>
 
-            <div id="newdiv"></div>
+    <section id="services" class="bg-light">
+        <div class="container">   
+            <div>
+                <h3 class="head">
+                  <strong>Trending Articles</strong>
+                </h3>
+              <div>
+    
+                <div id="newdiv"></div>
+    
+              </div>
+            </div>
+          </div>
+    </section>
+
+    <section id="contact">
+      <div class="container">
+        <div class="row">
+          <div class="col-8 mx-auto">
+            <h2>Chat</h2>
+            <iframe src="http://deadsimplechat.com/+RNRyc" frameborder="0" width="800px" height="600px"></iframe>
 
           </div>
         </div>
       </div>
+    </section>
 
-    </div>
+    <!-- Footer -->
+    <footer class="py-5 bg-dark">
+      <div class="container">
+          <p  class="m-0 text-center"><a class = "email" href="mailto:jham2282@gmail.com?Subject=Hello%20again">Email Us</a></p>
+        <p class="m-0 text-center text-white">Copyright &copy; BitBuzz 2018</p>
+      </div>
+      <!-- /.container -->
+    </footer>
 
-    <script src="assets/javascript/script.js"></script>
-    <script src="assets/javascript/script_coindesk.js"></script>
+    <!-- Bootstrap core JavaScript -->
+    <script src="vendor/jquery/jquery.min.js"></script>
+    <script src="vendor/bootstrap/js/bootstrap.bundle.min.js"></script>
+
+    <!-- Plugin JavaScript -->
+    <script src="vendor/jquery-easing/jquery.easing.min.js"></script>
+
+    <!-- Custom JavaScript for this theme -->
+    <script src="js/scrolling-nav.js"></script>
+        <script src="assets/javascript/script.js"></script>
+
   </body>
+
+</html>
