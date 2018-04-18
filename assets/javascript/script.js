@@ -18,14 +18,29 @@ var config = {
     messagingSenderId: "1004449441010"
 };
 firebase.initializeApp(config);
-console.log('i am here')
+console.log('i am here');
+
+
+function loggedIn() {
+
+    // Declare variables
+    var dataRef = firebase.database();
+    var fbTime = moment();
+    $('.submit').on('click', function(e) {
+  
+      e.preventDefault();
+      // Grab input values
+      });
+  
+  };
 
 
 
 function signIn() {
+
     var provider = new firebase.auth.GoogleAuthProvider();
     firebase.auth().signInWithPopup(provider).then(function (result) {
-        console.log('i ma here')
+        console.log('i ma here');
         //console.log(Popup);
         // This gives you a Google Access Token. You can use it to access the Google API.
         var token = result.credential.accessToken;
@@ -36,6 +51,7 @@ function signIn() {
         console.log("sign in");
         $(".signIn").text("Hello "+user.displayName);
         console.log(user);
+        loggedIn();
         // ...
     });
 };
@@ -81,3 +97,4 @@ fetch(req)
 $(document).ready(function () {
     $(".btcwdgt-chart").addClass("charted");
 })
+
