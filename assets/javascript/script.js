@@ -20,7 +20,7 @@
  
  
  
- 
+  function signIn() { 
     var provider = new firebase.auth.GoogleAuthProvider();
     firebase.auth().signInWithPopup(provider).then(function(result) {
         console.log('i ma here')
@@ -31,15 +31,13 @@
         // The signed-in user info.
         var user = result.user;
  
-        console.log(user.val());
         // ...
     });
- function signIn() {
         console.log("sign in");
  
  };
 
- 
+
 
 
 var url1 = 'https://newsapi.org/v2/everything?' +
